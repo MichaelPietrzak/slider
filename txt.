@@ -1,0 +1,12 @@
+$("#img1").animate({ left: += "500px"}, 1000, "linear", function() { // koniec });
+$("#img2").animate({ left: += "500px"}, 1000, "linear");
+
+
+
+
+$(function () {
+    $('.slide:gt(0)').hide();
+    setInterval(function () {
+        $('.slide:first').fadeOut('slow').next().fadeIn('slow').end().appendTo('.slider');
+    }, 2500)
+});

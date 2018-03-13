@@ -1,0 +1,89 @@
+@primaryColor: #dddddd;
+@backgroundColor: #F0F0F0;
+@hoverBackgroundColor: #727272; 
+@borderRadius: 35px; 
+
+body {
+    background-color: @primaryColor; 
+}
+
+/* MIXINS */
+
+.border {
+    border: 2px solid; 
+    border-color: #727272;
+}
+
+.sliderDimensions {
+    width: 600px; 
+    height: 400px; 
+}
+
+/******************************************/
+
+.wrapper {
+    width: 600px; 
+    margin: 0 auto; 
+}
+
+#slider {
+    .sliderDimensions;  
+    overflow: hidden; 
+    margin: 30px auto; 
+    .border; 
+
+}
+
+#slider > img {
+	.sliderDimensions; 	
+	float:left;
+	display:none;
+}
+
+a {
+    padding: 5px 10px;
+    background-color: @backgroundColor; 
+    margin-top: -350px; 
+    text-decoration: none; 
+    font-family: 'Lato', sans-serif;
+    font-size: 25px; 
+    font-weight: bold; 
+    border-radius: @borderRadius; 
+    color: #000000; 
+    .border; 
+}
+
+a:hover {
+    background-color: @hoverBackgroundColor;  
+}
+
+a.left {
+    float: left; 
+    margin-left: -180px;
+}
+
+a.right {
+    float: right; 
+    margin-right: -30px;
+}
+
+ol{
+    list-style: none;
+    width:100%;
+    margin-top: 50px;
+}
+
+ol li{
+    background-color: @backgroundColor; 
+    border-radius: @borderRadius; 
+    display: inline-block;
+    width:20px;
+    height:20px;
+    cursor: pointer;
+    .border;
+}
+
+
+ol li:hover {
+    background-color: @hoverBackgroundColor; 
+}
